@@ -1,0 +1,25 @@
+mode: set
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:20.68,22.2 1 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:24.78,26.33 2 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:26.33,28.3 1 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:28.3,30.3 1 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:33.85,41.21 5 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:46.2,50.29 3 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:55.2,55.16 1 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:61.2,63.67 3 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:41.21,44.3 2 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:50.29,53.3 2 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:55.16,59.3 3 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:63.67,65.3 1 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:68.86,72.16 3 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:78.2,78.38 1 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:85.2,86.50 2 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:92.2,94.16 2 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:100.2,102.67 3 1
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:72.16,76.3 3 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:78.38,82.3 3 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:86.50,90.3 3 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:94.16,98.3 3 0
+github.com/a-h/rtrn/httpservice/main/callbackhandler.go:102.67,104.3 1 0
+github.com/a-h/rtrn/httpservice/main/main.go:15.13,20.2 3 0
+github.com/a-h/rtrn/httpservice/main/main.go:22.57,28.2 5 1

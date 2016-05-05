@@ -1,0 +1,13 @@
+mode: set
+github.com/a-h/rtrn/dataaccess/callbackrequest.go:30.44,33.2 2 1
+github.com/a-h/rtrn/dataaccess/dataaccess.go:22.61,24.2 1 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:27.81,29.16 2 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:33.2,40.28 5 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:44.2,44.21 1 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:29.16,32.3 2 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:40.28,42.3 1 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:49.99,51.16 2 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:55.2,64.16 7 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:69.2,69.21 1 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:51.16,54.3 2 0
+github.com/a-h/rtrn/dataaccess/dataaccess.go:64.16,67.3 2 0

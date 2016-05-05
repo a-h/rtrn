@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -X POST -d '{"url": "http://example.com/callback","method": "GET","postdata": {"headers": { "x-header-one": "x-header-one-value"},"data": null},"retryphases": [{ "retries": 1, "delay": 300000000000}],"applicationid": "test","queueid": "queueid value","notificationemailaddress": "a-h@github.com"}' http://localhost:8080/callback
