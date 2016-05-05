@@ -34,14 +34,15 @@ func (da MongoDataAccess) GetCallbackStatus(id string) (*CallbackStatus, error) 
 
 	c := session.DB("rtrn").C("callbacks")
 
-	result := CallbackStatus{}
-	err = c.FindId(bson.ObjectIdHex(id)).One(&result)
+	result := NewCallbackStatus()
+	err = c.FindId(id).One(result)
 
 	if err == mgo.ErrNotFound {
+		log.Fatalf("Failed to find a callback with id %s.", id)
 		return nil, nil
 	}
 
-	return &result, nil
+	return result, nil
 }
 
 // StoreCallbackRequest stores a callback request and returns the newly created
@@ -56,7 +57,7 @@ func (da MongoDataAccess) StoreCallbackRequest(request *CallbackRequest) (*Callb
 
 	c := session.DB("rtrn").C("callbacks")
 
-	result := CallbackStatus{}
+	result := NewCallbackStatus()
 	result.ID = bson.NewObjectId().Hex()
 	result.Request = *request
 
@@ -66,5 +67,5 @@ func (da MongoDataAccess) StoreCallbackRequest(request *CallbackRequest) (*Callb
 		return nil, err
 	}
 
-	return &result, nil
+	return result, nil
 }

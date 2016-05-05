@@ -13,3 +13,12 @@ type CallbackStatus struct {
 	// Whether any of the attempts are classified as successful.
 	Succcess bool `json:"success"`
 }
+
+// NewCallbackStatus creates a CallbackStatus with Attempts and Locks
+// initialised to empty slices.
+func NewCallbackStatus() *CallbackStatus {
+	return &CallbackStatus{
+		Attempts: []CallbackAttempt{},
+		Locks:    []CallbackLock{},
+	}
+}
