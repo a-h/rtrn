@@ -1,4 +1,4 @@
-package main
+package httpservice
 
 import (
 	"encoding/json"

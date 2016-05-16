@@ -1,6 +1,7 @@
-package dataaccess
+package mongo
 
 import (
+	"github.com/a-h/rtrn/dataaccess"
 	"reflect"
 	"testing"
 	"time"
@@ -8,15 +9,15 @@ import (
 
 func TestThatMongoDBEntitiesCanBeCreated(t *testing.T) {
 	da := NewMongoDataAccess("mongodb://localhost:27017")
-	request := &CallbackRequest{
+	request := &dataaccess.CallbackRequest{
 		URL:    "http://example.com/test/123",
 		Method: "GET",
-		PostData: CallbackData{
+		PostData: dataaccess.CallbackData{
 			Headers: make(map[string]string),
 			Data:    []byte{},
 		},
-		RetryPhases: []RetryPhase{
-			RetryPhase{
+		RetryPhases: []dataaccess.RetryPhase{
+			dataaccess.RetryPhase{
 				Retries: 1,
 				Delay:   time.Minute * 5,
 			},
