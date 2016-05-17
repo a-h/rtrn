@@ -4,10 +4,10 @@ import (
 	"log"
 	"net/http"
 
+	"fmt"
 	"github.com/a-h/rtrn/dataaccess"
 	"github.com/gorilla/mux"
 	"os"
-	"fmt"
 )
 
 func Serve(da dataaccess.DataAccess) {

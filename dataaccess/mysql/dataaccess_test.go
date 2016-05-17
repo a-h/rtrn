@@ -1,8 +1,8 @@
 package mysql
 
 import (
-	"testing"
 	"github.com/a-h/rtrn/dataaccess_test"
+	"testing"
 )
 
 func TestThatEntitiesCanBeCreated(t *testing.T) {

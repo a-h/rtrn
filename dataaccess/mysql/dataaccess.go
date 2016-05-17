@@ -2,11 +2,12 @@ package mysql
 
 import (
 	"database/sql"
+	"fmt"
 	"github.com/a-h/rtrn/dataaccess"
 	_ "github.com/go-sql-driver/mysql"
-	"fmt"
 	"log"
 )
+
 type MySqlDataAccess struct {
 	ConnectionString string
 }
@@ -26,7 +27,7 @@ func (da MySqlDataAccess) StoreCallbackRequest(request *dataaccess.CallbackReque
 	defer db.Close()
 
 	insert, err := db.Prepare("INSERT INTO callbacks (url, method) VALUES (?,?)")
-	if (err != nil) {
+	if err != nil {
 		log.Fatal(err)
 		return nil, err
 	}

@@ -2,12 +2,12 @@ package dataaccess
 
 import (
 	"github.com/a-h/rtrn/dataaccess"
-	"time"
-	"testing"
 	"reflect"
+	"testing"
+	"time"
 )
 
-func CreateRequest() (*dataaccess.CallbackRequest) {
+func CreateRequest() *dataaccess.CallbackRequest {
 	return &dataaccess.CallbackRequest{
 		URL:    "http://example.com/test/123",
 		Method: "GET",

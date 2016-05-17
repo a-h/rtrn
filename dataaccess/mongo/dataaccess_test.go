@@ -1,8 +1,8 @@
 package mongo
 
 import (
-	"testing"
 	"github.com/a-h/rtrn/dataaccess_test"
+	"testing"
 )
 
 func TestThatMongoDBEntitiesCanBeCreated(t *testing.T) {
