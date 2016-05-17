@@ -1,2 +1,7 @@
+*.exe
+.idea/
+*.ipr
+*.iml
+*.iws
 coverage_*.html
 .*.out

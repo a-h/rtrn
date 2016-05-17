@@ -1,22 +1,22 @@
-package dataaccess
+package dataaccess_test
 
 import (
-	"reflect"
-	"testing"
+	"github.com/a-h/rtrn/dataaccess"
 	"time"
+	"testing"
+	"reflect"
 )
 
-func TestThatMongoDBEntitiesCanBeCreated(t *testing.T) {
-	da := NewMongoDataAccess("mongodb://localhost:27017")
-	request := &CallbackRequest{
+func CreateRequest() (*dataaccess.CallbackRequest) {
+	return &dataaccess.CallbackRequest{
 		URL:    "http://example.com/test/123",
 		Method: "GET",
-		PostData: CallbackData{
+		PostData: dataaccess.CallbackData{
 			Headers: make(map[string]string),
 			Data:    []byte{},
 		},
-		RetryPhases: []RetryPhase{
-			RetryPhase{
+		RetryPhases: []dataaccess.RetryPhase{
+			dataaccess.RetryPhase{
 				Retries: 1,
 				Delay:   time.Minute * 5,
 			},
@@ -25,6 +25,10 @@ func TestThatMongoDBEntitiesCanBeCreated(t *testing.T) {
 		QueueID:                  "TestQueue",
 		NotificationEmailAddress: "a-h@github.com",
 	}
+}
+
+func BaseDataAccessImplementationTest(da dataaccess.DataAccess, t *testing.T) {
+	request := CreateRequest()
 
 	stored, _ := da.StoreCallbackRequest(request)
 	retrieved, _ := da.GetCallbackStatus(stored.ID)

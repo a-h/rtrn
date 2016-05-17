@@ -1,1 +1,1 @@
-go test ./httpservice/main/ ./dataaccess/ -cover
+go test ./httpservice/ ./dataaccess/ ./dataacess/mongo -cover
