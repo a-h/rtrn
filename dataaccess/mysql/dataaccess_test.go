@@ -6,6 +6,6 @@ import (
 )
 
 func TestThatEntitiesCanBeCreated(t *testing.T) {
-	da := NewMySqlDataAccess("mariadb")
-	dataaccess_test.BaseDataAccessImplementationTest(da, t)
+	da := NewMySqlDataAccess("rtrn:rtrn@tcp(mariadb:3306)/rtrn")
+	dataaccess.BaseDataAccessImplementationTest(da, t)
 }

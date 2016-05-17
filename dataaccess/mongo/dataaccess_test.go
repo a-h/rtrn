@@ -7,5 +7,5 @@ import (
 
 func TestThatMongoDBEntitiesCanBeCreated(t *testing.T) {
 	da := NewMongoDataAccess("mongodb://mongo:27017")
-	dataaccess_test.BaseDataAccessImplementationTest(da, t)
+	dataaccess.BaseDataAccessImplementationTest(da, t)
 }

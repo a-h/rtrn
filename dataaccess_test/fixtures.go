@@ -1,4 +1,4 @@
-package dataaccess_test
+package dataaccess
 
 import (
 	"github.com/a-h/rtrn/dataaccess"

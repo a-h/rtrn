@@ -1,0 +1,7 @@
+.idea/
+.git/
+test/mariadb/
+*.iml
+*.ipr
+*.iws
+.gitignore
