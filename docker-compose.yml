@@ -1,0 +1,22 @@
+---
+version: '2'
+services:
+  mongo:
+    image: mongo
+    expose:
+    - "27017"
+
+  mariadb:
+    build: test/mariadb
+    expose:
+    - "3306"
+
+  rtrn:
+    build:
+      context: .
+      dockerfile: test/rtrn/Dockerfile
+    command: go test github.com/a-h/rtrn/...
+    depends_on:
+    - mongo
+    - mariadb
+
