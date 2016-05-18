@@ -1,16 +1,18 @@
 FROM golang:1.6
 ENV GOPATH /go
-ENV HTTP_PROXY http://10.0.2.2:3128
-ENV HTTPS_PROXY http://10.0.2.2:3128
-ENV http_proxy http://10.0.2.2:3128
-ENV https_proxy http://10.0.2.2:3128
-ENV NO_PROXY .hcuk.pri,10.0.2.2,192.168.99.,127.0.0.1
-ENV no_proxy .hcuk.pri,10.0.2.2,192.168.99.,127.0.0.1
+
+# Dependencies we know we need, to make the build faster
+RUN go get gopkg.in/tomb.v2 \
+    && go get github.com/gorilla/mux \
+    && go get gopkg.in/mgo.v2 \
+    && go get github.com/go-sql-driver/mysql
+
+ADD https://raw.githubusercontent.com/vishnubob/wait-for-it/master/wait-for-it.sh /
+RUN chmod +x /wait-for-it.sh
+
 COPY . /go/src/github.com/a-h/rtrn
 
-RUN go get -d -v github.com/a-h/rtrn
-RUN go install github.com/a-h/rtrn
-
 WORKDIR /go/src/github.com/a-h/rtrn
-RUN go get -d -v
+RUN go get -d -v ...
 
+CMD /wait-for-it.sh mariadb:3306 -t 60 && /wait-for-it.sh mongo:27017 -t 60 && go test github.com/a-h/rtrn/...

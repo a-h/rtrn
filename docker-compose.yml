@@ -15,7 +15,10 @@ services:
     build:
       context: .
       dockerfile: test/rtrn/Dockerfile
-    command: go test github.com/a-h/rtrn/...
+      args:
+      - HTTP_PROXY=$DOCKER_HTTP_PROXY
+      - HTTPS_PROXY=$DOCKER_HTTPS_PROXY
+      - NO_PROXY=$DOCKER_NO_PROXY
     depends_on:
     - mongo
     - mariadb

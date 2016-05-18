@@ -8,7 +8,6 @@ import (
 	"gopkg.in/mgo.v2/bson"
 )
 
-
 // MongoDataAccess provides access to the data structures.
 type MongoDataAccess struct {
 	connectionString string
